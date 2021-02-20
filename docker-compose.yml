@@ -1,0 +1,11 @@
+# docker-compose file that runs a number of replicas of the web service image.
+version: '3.8'
+
+services:
+  web-service:
+    image: web-service:latest
+    ports:
+      - 80:80
+    deploy:
+      mode: replicated
+      replicas: 3
